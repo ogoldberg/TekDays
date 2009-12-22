@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="ogoldberg-laptop" id="0" name="TekEventControllerTests" package="" tests="1" time="1.237" timestamp="2009-12-19T04:29:16">
+      <properties />
+
+      <testcase classname="TekEventControllerTests" name="testSomething" time="1.237" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="1" failures="0" hostname="ogoldberg-laptop" id="1" name="TekEventTests" package="" tests="1" time="0.104" timestamp="2009-12-19T04:29:18">
+      <properties />
+
+      <testcase classname="TekEventTests" name="testToString" time="0.104">
+          <error message="No such property: tekEvent for class: java.lang.String" type="groovy.lang.MissingPropertyException">groovy.lang.MissingPropertyException: No such property: tekEvent for class: java.lang.String
+	at TekEventTests.testToString(TekEventTests.groovy:20)
+	at _GrailsTest_groovy$_run_closure4.doCall(_GrailsTest_groovy:203)
+	at _GrailsTest_groovy$_run_closure4.call(_GrailsTest_groovy)
+	at _GrailsTest_groovy$_run_closure2.doCall(_GrailsTest_groovy:147)
+	at _GrailsTest_groovy$_run_closure1_closure19.doCall(_GrailsTest_groovy:113)
+	at _GrailsTest_groovy$_run_closure1.doCall(_GrailsTest_groovy:96)
+	at TestApp$_run_closure1.doCall(TestApp.groovy:66)
+	at gant.Gant$_dispatch_closure4.doCall(Gant.groovy:324)
+	at gant.Gant$_dispatch_closure6.doCall(Gant.groovy:334)
+	at gant.Gant$_dispatch_closure6.doCall(Gant.groovy)
+	at gant.Gant.withBuildListeners(Gant.groovy:344)
+	at gant.Gant.this$2$withBuildListeners(Gant.groovy)
+	at gant.Gant$this$2$withBuildListeners.callCurrent(Unknown Source)
+	at gant.Gant.dispatch(Gant.groovy:334)
+	at gant.Gant.this$2$dispatch(Gant.groovy)
+	at gant.Gant.invokeMethod(Gant.groovy)
+	at gant.Gant.processTargets(Gant.groovy:495)
+	at gant.Gant.processTargets(Gant.groovy:480)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testToString--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testToString--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="ogoldberg-laptop" id="2" name="TekUserControllerTests" package="" tests="1" time="0.049" timestamp="2009-12-19T04:29:18">
+      <properties />
+
+      <testcase classname="TekUserControllerTests" name="testSomething" time="0.049" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="ogoldberg-laptop" id="3" name="TekUserTests" package="" tests="1" time="0.011" timestamp="2009-12-19T04:29:18">
+      <properties />
+
+      <testcase classname="TekUserTests" name="testSomething" time="0.011" />
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+</testsuites>
