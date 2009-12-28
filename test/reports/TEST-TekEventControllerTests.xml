@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="ogoldberg-laptop" name="TekEventControllerTests" tests="1" time="1.237" timestamp="2009-12-19T04:29:16">
-  <properties />
-  <testcase classname="TekEventControllerTests" name="testSomething" time="1.237" />
-  <system-out><![CDATA[--Output from testSomething--
-]]></system-out>
-  <system-err><![CDATA[--Output from testSomething--
-]]></system-err>
-</testsuite>
