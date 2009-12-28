@@ -17,6 +17,6 @@ class TekEventTests extends GrailsUnitTestCase {
                                     startDate: new Date('6/2/2009'),
                                     endDate: new Date('6/5/2009'),
                                     description: 'This conference will cover all...')
-        assertEquals 'Groovy One, San Francisco, CA'. tekEvent.toString()
+        assertEquals 'Groovy One, San Francisco, CA', tekEvent.toString()
             }
 }
