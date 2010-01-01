@@ -74,19 +74,23 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="startDate"><g:message code="tekEvent.startDate.label" default="Start Date" /></label>
+                                    <label for="startDate">Start Date:</label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: tekEventInstance, field: 'startDate', 'errors')}">
-                                    <g:datePicker name="startDate" precision="day" value="${tekEventInstance?.startDate}"  />
+                                <td valign="top" class="value $
+                                        {hasErrors(bean: tekEventInstance, field: 'startDate', 'errors')}">
+                                    <g:datePicker name="startDate" precision="day"
+                                                  value="${tekEventInstance?.startDate}"  />
                                 </td>
                             </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="endDate"><g:message code="tekEvent.endDate.label" default="End Date" /></label>
+                                    <label for="endDate">End Date:</label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: tekEventInstance, field: 'endDate', 'errors')}">
-                                    <g:datePicker name="endDate" precision="day" value="${tekEventInstance?.endDate}"  />
+                                <td valign="top" class="value $
+                                        {hasErrors(bean: tekEventInstance, field: 'endDate', 'errors')}">
+                                    <g:datePicker name="endDate" precision="day"
+                                                  value="${tekEventInstance?.endDate}"  />
                                 </td>
                             </tr>
                         
