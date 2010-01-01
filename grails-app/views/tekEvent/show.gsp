@@ -85,7 +85,7 @@
                             
                             <td valign="top" style="text-align: left;" class="value">
                                 <ul>
-                                <g:each in="${tekEventInstance.sponsorships}" var="s">
+                                <g:each var="s" in="${tekEventInstance.sponsorships}" >
                                     <li><g:link controller="sponsorship" action="show" id="${s.id}">
                                         ${s.sponsor?.encodeAsHTML()}
                                     </g:link></li>
