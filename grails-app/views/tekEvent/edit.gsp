@@ -158,7 +158,7 @@
           <g:link controller="message"
                   action="create"
                   params="['tekEvent.id': tekEventInstance?.id]">
-                  Add Message</g:link>
+            Add Message</g:link>
 
           </td>
           </tr>
