@@ -1,6 +1,8 @@
 class BootStrap {
-
-     def init = { servletContext ->
+     
+     def init = { 
+         servletContext ->
+          
          new TekUser(fullName: 'John Doe',
                       userName: 'jdoe',
                       password: 't0ps3cr3t',
@@ -86,7 +88,7 @@ class BootStrap {
         g1.save()
 
                }
-
+     
 
 
     def destroy = {
