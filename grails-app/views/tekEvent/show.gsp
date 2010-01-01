@@ -14,7 +14,7 @@
             <span class="menuButton"><g:link class="create" action="create"><g:message code="New TekEvent" args="[entityName]" /></g:link></span>
         </div>
         <div class="body">
-            <h1><g:message code="Show TekEvent" args="[entityName]" /></h1>
+            <h1>${fieldValue(bean:tekEventInstance, field:'name')}</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
