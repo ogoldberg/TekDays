@@ -22,25 +22,14 @@
                 <table>
                     <tbody>
                     
+                        
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="tekEvent.id.label" default="Id" /></td>
+                            <td valign="top" class="name">Location:</td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: tekEventInstance, field: "id")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="tekEvent.name.label" default="Name" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: tekEventInstance, field: "name")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="tekEvent.city.label" default="City" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: tekEventInstance, field: "city")}</td>
-                            
+                            <td valign="top" class="value">
+                                ${fieldValue(bean: tekEventInstance, field: "venue")},
+                                ${fieldValue(bean: tekEventInstance, field: "city")}
+                            </td>
                         </tr>
                     
                         <tr class="prop">
@@ -50,33 +39,33 @@
                             
                         </tr>
                     
+                       
                         <tr class="prop">
+                            <td valign="top" class="name">Start Date:</td>
+                            
+                            <td valign="top" class="value">
+                                <g:formatDate format="MMMM dd, yyyy"
+                                              date="${tekEventInstance?.startDate}" />
+                            </td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">End Date:</td>
+                            
+                            <td valign="top" class="value">
+                                <g:formatDate format="MMMM dd, yyyy"
+                                              date="${tekEventInstance?.endDate}" /></td>
+                            
+                        </tr>
+
+                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="tekEvent.organizer.label" default="Organizer" /></td>
-                            
+
                             <td valign="top" class="value"><g:link controller="tekUser" action="show" id="${tekEventInstance?.organizer?.id}">${tekEventInstance?.organizer?.encodeAsHTML()}</g:link></td>
-                            
+
                         </tr>
                     
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="tekEvent.venue.label" default="Venue" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: tekEventInstance, field: "venue")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="tekEvent.startDate.label" default="Start Date" /></td>
-                            
-                            <td valign="top" class="value"><g:formatDate date="${tekEventInstance?.startDate}" /></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="tekEvent.endDate.label" default="End Date" /></td>
-                            
-                            <td valign="top" class="value"><g:formatDate date="${tekEventInstance?.endDate}" /></td>
-                            
-                        </tr>
                     
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="tekEvent.volunteers.label" default="Volunteers" /></td>
@@ -92,12 +81,14 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="tekEvent.sponsorships.label" default="Sponsorships" /></td>
+                            <td valign="top" class="name">Sponsored by:</td>
                             
                             <td valign="top" style="text-align: left;" class="value">
                                 <ul>
                                 <g:each in="${tekEventInstance.sponsorships}" var="s">
-                                    <li><g:link controller="sponsorship" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></li>
+                                    <li><g:link controller="sponsorship" action="show" id="${s.id}">
+                                        ${s.sponsor?.encodeAsHTML()}
+                                    </g:link></li>
                                 </g:each>
                                 </ul>
                             </td>
