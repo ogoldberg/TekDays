@@ -2,6 +2,7 @@
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+    def taskService
     def index = {
         redirect(action: "list", params: params)
     }
@@ -19,9 +20,10 @@
 
     def save = {
         def tekEventInstance = new TekEvent(params)
-        if (tekEventInstance.save(flush: true)) {
-            flash.message = "${message(code: 'default.created.message', args: [message(code: 'tekEvent.label', default: 'TekEvent'), tekEventInstance.id])}"
-            redirect(action: "show", id: tekEventInstance.id)
+        if(!tekEventInstance.hasErrors() && tekEventInstance.save()) {
+            flash.message = "TekEvent ${tekEventInstance.id} created"
+            taskService.addDefaultTasks(tekEventInstance)
+            redirect(action:show,id:tekEventInstance.id)
         }
         else {
             render(view: "create", model: [tekEventInstance: tekEventInstance])
