@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'tekEvent.label', default: 'TekEvent')}" />
-        <title><g:message code="default.list.label" args="[entityName]" /></title>
+        <title><g:message code="TekEvent List" args="[entityName]" /></title>
     </head>
     <body>
         <div class="nav">
@@ -40,15 +40,12 @@
                         
                             <td>
                         <g:link action="show" id="${tekEventInstance.id}">
-                              ${fieldValue(bean: tekEventInstance, field: "id")}</g:link></td>
-                        
-                            <td>${fieldValue(bean: tekEventInstance, field: "name")}</td>
+                              ${fieldValue(bean: tekEventInstance, field: "name")}
+                        </g:link></td>
                         
                             <td>${fieldValue(bean: tekEventInstance, field: "city")}</td>
                         
                             <td>${fieldValue(bean: tekEventInstance, field: "description")}</td>
-                        
-                            <td>${fieldValue(bean: tekEventInstance, field: "organizer")}</td>
                         
                             <td>${fieldValue(bean: tekEventInstance, field: "venue")}</td>
                         
