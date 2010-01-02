@@ -2,7 +2,7 @@ dataSource {
 	pooled = true
 	driverClassName = "com.mysql.jdbc.Driver"
 	username = "root"
-	password = ""
+	password = "foo"
 }
 hibernate {
     cache.use_second_level_cache=true
@@ -14,7 +14,7 @@ environments {
 	development {
 		dataSource {
 			dbCreate = "update" // one of 'create', 'create-drop','update'
-			url = "jdbc:mysql://localhost:3306/tekdays"
+                        url = "jdbc:mysql://localhost:3306/tekDaysDev"
                 }
 	}
 	test {
@@ -23,10 +23,10 @@ environments {
 			url = "jdbc:hsqldb:mem:testDb"
 		}
 	}
-	production {
+        production {
 		dataSource {
 			dbCreate = "update"
-			url = "jdbc:hsqldb:file:prodDb;shutdown=true"
+			url = "jdbc:mysql://localhost:3306/tekdays"
 		}
 	}
 }
