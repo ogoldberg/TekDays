@@ -73,7 +73,9 @@
                             <td valign="top" style="text-align: left;" class="value">
                                 <ul>
                                 <g:each in="${tekEventInstance.volunteers}" var="v">
-                                    <li><g:link controller="tekUser" action="show" id="${v.id}">${v?.encodeAsHTML()}</g:link></li>
+                                    <li><g:link controller="tekUser"
+                                                action="show"
+                                                id="${v.id}">${v?.encodeAsHTML()}</g:link></li>
                                 </g:each>
                                 </ul>
                             </td>
