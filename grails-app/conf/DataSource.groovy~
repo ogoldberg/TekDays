@@ -20,7 +20,7 @@ environments {
 	test {
 		dataSource {
 			dbCreate = "update"
-			uurl = "jdbc:mysql://localhost:3306/tekDaysTest"
+			url = "jdbc:hsqldb:mem:testDb"
 		}
 	}
         production {
