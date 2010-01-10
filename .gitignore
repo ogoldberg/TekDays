@@ -1,3 +1,4 @@
+target
 .svn
 plugins/*
 html
@@ -14,3 +15,5 @@ web-app/index.gsp
 *DB*
 web-app/images/mascot_real.png
 .DS_Store
+*~
+
