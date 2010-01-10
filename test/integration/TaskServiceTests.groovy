@@ -20,7 +20,7 @@ class TaskServiceTests extends GrailsUnitTestCase {
                              city:'TestCity, USA',
                              description:'Test Description',
                              organizer:TekUser.findByUserName('tester'),
-                             venue:'TestCenter'
+                             venue:'TestCenter',
                              startDate:new Date(),
                              endDate:new Date() + 1)
         taskService.addDefaultTasks(e)
