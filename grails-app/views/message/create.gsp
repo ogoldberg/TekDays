@@ -45,17 +45,22 @@
               <td valign="top" class="name">
                 <label for="subject"><g:message code="message.subject.label" default="Subject" /></label>
               </td>
-              <td valign="top" class="value ${hasErrors(bean: messageInstance, field: 'subject', 'errors')}">
-          <g:textField name="subject" value="${messageInstance?.subject}" />
-          </td>
-          </tr>
+              <td valign="top" 
+                  class="value ${hasErrors(bean: messageInstance, field: 'subject', 'errors')}">
+                <input type="text" class="messageField" id="subject" name="subject"
+                       value="${fieldValue(bean:messageInstance,field:'subject')}"/>
+              </td>
+            </tr>
 
           <tr class="prop">
             <td valign="top" class="name">
               <label for="content"><g:message code="message.content.label" default="Content" /></label>
             </td>
-            <td valign="top" class="value ${hasErrors(bean: messageInstance, field: 'content', 'errors')}">
-          <g:textArea name="content" cols="40" rows="5" value="${messageInstance?.content}" />
+            <td valign="top"
+                class="value ${hasErrors(bean: messageInstance, field: 'content', 'errors')}">
+         <textarea class="messageField" rows="5" cols="60" name="content">
+          ${fieldValue(bean:MessageInstance, field:'content')}
+         </textarea>
           </td>
           </tr>
 
@@ -68,16 +73,8 @@
           </td>
           </tr>
 
-          <tr class="prop">
-            <td valign="top" class="name">
-              <label for="event"><input type="hidden" name="event.id" value="${messageInstance?.event?.id}" /></label>
-            </td>
-            <td valign="top" class="value ${hasErrors(bean: messageInstance, field: 'event', 'errors')}">
-          <g:select name="event.id" from="${TekEvent.list()}" optionKey="id" value="${messageInstance?.event?.id}"  />
-          </td>
-          </tr>
-
-          </tbody>
+          <input type="hidden" name="event.id" value="${messageInstance?.event?.id}" /></label>
+       </tbody>
         </table>
       </div>
       <div class="buttons">
