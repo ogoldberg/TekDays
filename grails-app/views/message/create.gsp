@@ -29,6 +29,17 @@
       <div class="dialog">
         <table>
           <tbody>
+            <g:if test="${messageInstance.parent}">
+              <tr class="prop">
+                <td valign="top" class="name">
+                  <label>In Reply to:</label>
+                </td>
+                <td valign="top" class="value">
+                  ${messageInstance.parent.author}
+                </td>
+              </tr>
+            </g:if>
+            
 
             <tr class="prop">
               <td valign="top" class="name">
@@ -45,15 +56,6 @@
             </td>
             <td valign="top" class="value ${hasErrors(bean: messageInstance, field: 'content', 'errors')}">
           <g:textArea name="content" cols="40" rows="5" value="${messageInstance?.content}" />
-          </td>
-          </tr>
-
-          <tr class="prop">
-            <td valign="top" class="name">
-              <label for="parent"><g:message code="message.parent.label" default="Parent" /></label>
-            </td>
-            <td valign="top" class="value ${hasErrors(bean: messageInstance, field: 'parent', 'errors')}">
-          <g:select name="parent.id" from="${Message.list()}" optionKey="id" value="${messageInstance?.parent?.id}" noSelection="['null': '']" />
           </td>
           </tr>
 
