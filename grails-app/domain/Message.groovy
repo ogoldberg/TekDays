@@ -12,5 +12,6 @@ class Message {
         author(nullable:false)
     }
 
+   
     static belongsTo = TekEvent
 }
