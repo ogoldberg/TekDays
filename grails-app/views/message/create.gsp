@@ -30,7 +30,8 @@
         <table>
           <tbody>
             <g:if test="${messageInstance.parent}">
-              <tr class="prop">
+              <input type="hidden" name="parent.id" value="${messageInstance.parent.id}" />
+               <tr class="prop">
                 <td valign="top" class="name">
                   <label>In Reply to:</label>
                 </td>
