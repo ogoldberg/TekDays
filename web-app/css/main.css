@@ -167,6 +167,10 @@ div.errors li {
     padding-left: 30px;
 }
 
+#messageList li {
+    list-style-type: none;
+}
+
 td.errors select {
     border: 1px solid red;
 }

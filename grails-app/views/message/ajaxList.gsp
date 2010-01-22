@@ -22,12 +22,15 @@
       <div class="body">
         <h1>${event?.name} - Forum Messages</h1>
         <div id="messageList">
+            <ul>
           <g:each in="${messageInstanceList}" var="messageInstance">
+          <li>
             <g:remoteLink action="showDetail" id="${messageInstance?.id}"
                           update="details">
               ${messageInstance.author.fullName} - ${messageInstance.subject}
-            </g:remoteLink>
-          </g:each>
+              </g:remoteLink>
+              </li>
+          </g:each></ul>
         </div>
         <h3>Message Details</h3>
         <div id="details">
