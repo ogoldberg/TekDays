@@ -11,7 +11,7 @@
         <div class="nav">
             <span class="menuButton"><a class="home" href="${createLink(uri: '/')}">Home</a></span>
             <span class="menuButton"><g:link class="create" action="create"
-                                             param="'["event.id":"${event?.id}"]'>New Message
+                                             params='["event.id":"${event?.id}"]'>New Message
               </g:link></span>
         </div>
         <div class="body">

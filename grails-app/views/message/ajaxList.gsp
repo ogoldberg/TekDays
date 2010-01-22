@@ -15,7 +15,7 @@
             </span>
             <span class="menuButton">
               <g:link class="create" action="create"
-                  param="'["event.id":"${event?.id}"]'>New Message
+                  params='["event.id":"${event?.id}"]'>New Message
               </g:link>
             </span>
         </div>
