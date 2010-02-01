@@ -1,8 +1,8 @@
 dataSource {
 	pooled = true
-    driverClassName = "com.mysql.jdbc.Driver"
-    username = "root"
-	password = "foo"
+    driverClassName = "org.hsqldb.jdbcDriver"
+    username = "sa"
+	password = ""
 }
 hibernate {
     cache.use_second_level_cache=true
@@ -13,10 +13,9 @@ hibernate {
 environments {
 	development {
 		dataSource {
-            driverClassName = "com.mysql.jdbc.Driver"
-			dbCreate = "update" // one of 'create', 'create-drop','update'
-            url = "jdbc:mysql://localhost:3306/tekDaysDev"
-                }
+			dbCreate = "create-drop" // one of 'create', 'create-drop','update'
+			url = "jdbc:hsqldb:mem:devDB"
+		}
 	}
 	test {
 		dataSource {
