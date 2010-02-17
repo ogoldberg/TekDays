@@ -2,7 +2,7 @@ class TekUser {
 
     String fullName
     String userName
-    String password
+    String password 
     String email
     String website
     String bio

@@ -119,7 +119,7 @@ class MessageController {
         }
     }
 
-    def reply ={
+    def reply = {
         def parent = Message.get(params.id)
         def messageInstance = new Message(parent:parent, event:parent.event,
                                                 subject:"RE: $parent.subject")
