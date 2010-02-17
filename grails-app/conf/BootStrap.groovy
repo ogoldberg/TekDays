@@ -84,14 +84,14 @@ class BootStrap {
             password: 't0ps3cr3t',
             email: 'jdoe@johnsgroovyshop.com',
             website: 'blog.johnsgroovyshop.com',
-            bio: '''stuff about this guy''').save()
+            bio: 'stuff about this guy').save()
 
         new TekUser(fullName: 'John Deere',
             userName: 'tractorman',
             password: 't0ps3cr3t',
             email: 'john.deere@porkproducers.org',
             website: 'somewebsite.com',
-            bio: '''stuff about this guy''').save()
+            bio: 'stuff about this guy').save()
     }
 
     def createDummyTekEvents() {
