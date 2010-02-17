@@ -46,11 +46,10 @@
     </div>
     <div class="buttons">
       <span class="menuButton">
-        <g:link class="create" action="reply" id="{$messageInstance?.id}">
+        <g:link class="create" action="reply" id="${messageInstance?.id}">
           Reply
         </g:link>
       </span>
     </div>
-  </div>
-</body>
+ </body>
 </html>
